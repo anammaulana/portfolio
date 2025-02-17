@@ -2,7 +2,6 @@ pipeline {
     agent any
  triggers {
         // Trigger build ketika ada perubahan pada repository
-        githubPull()
         githubPush()
     }
     environment {
