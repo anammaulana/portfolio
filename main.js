@@ -9,6 +9,12 @@ const translations = {
     menu: ['Tentang', 'Pengalaman', 'Karya'], menuOpen: 'Buka navigasi', menuClose: 'Tutup navigasi', switchLabel: 'Switch to English',
     waLabel: 'Mulai percakapan dengan Anam melalui WhatsApp',
     wa: ['Halo Anam, saya melihat portfolio Anda dan ingin berdiskusi.', 'Halo Anam, saya tertarik untuk berkolaborasi setelah melihat portfolio Anda.', 'Halo Anam, saya ingin berdiskusi tentang sebuah proyek.'],
+    caseButton: 'Lihat case study', caseLabels: ['Tujuan', 'Kontribusi', 'Teknologi', 'Hasil'],
+    cases: [
+      ['Membangun lingkungan privat untuk menguji deployment dan konfigurasi layanan tanpa mengganggu sistem produksi.', 'Merancang susunan perangkat, menyiapkan sistem Linux, jaringan lokal, container, serta skenario deployment dan troubleshooting.', 'Linux, Docker, networking, reverse proxy, Jenkins, dan shell scripting.', 'Tersedia laboratorium yang dapat digunakan berulang untuk eksperimen aplikasi, otomasi deployment, dan simulasi penanganan gangguan.'],
+      ['Menyatukan indikator kesehatan layanan agar anomali pada resource, log, dan availability lebih cepat terlihat.', 'Menentukan sinyal operasional penting, menyusun struktur dashboard, dan merancang alur pemeriksaan ketika layanan bermasalah.', 'Linux metrics, service health check, log monitoring, uptime monitoring, dan dashboard observability.', 'Menghasilkan konsep monitoring terpusat yang mempermudah pemeriksaan kondisi layanan dan membantu proses troubleshooting lebih terarah.'],
+      ['Mendukung proses pelayanan pelanggan melalui aplikasi yang menggabungkan informasi operasional dalam satu antarmuka.', 'Mengembangkan dan meningkatkan fitur aplikasi, mengintegrasikan frontend dengan layanan backend, serta mendukung deployment pada server.', 'JavaScript, Java, Quarkus, REST API, MySQL/PostgreSQL, Linux, dan CI/CD.', 'Fitur pelayanan dapat dikembangkan dan didistribusikan melalui alur delivery yang lebih konsisten, dengan dukungan operasional setelah deployment.']
+    ],
     values: [
       ['.skip-link', 'Lewati ke konten'], ['.hero-text', 'Saya membangun aplikasi yang andal, mengotomasi proses deployment, dan memastikan infrastruktur server tetap aman, stabil, serta siap berkembang.'],
       ['.cta-text', 'Mulai percakapan'], ['.actions .ghost', 'Unduh CV'], ['.hero-footer span:last-child', 'Scroll untuk menjelajah'],
@@ -28,6 +34,12 @@ const translations = {
     menu: ['About', 'Experience', 'Work'], menuOpen: 'Open navigation', menuClose: 'Close navigation', switchLabel: 'Ganti ke Bahasa Indonesia',
     waLabel: 'Start a WhatsApp conversation with Anam',
     wa: ['Hi Anam, I saw your portfolio and would like to discuss something with you.', 'Hi Anam, I am interested in collaborating after seeing your portfolio.', 'Hi Anam, I would like to discuss a project with you.'],
+    caseButton: 'View case study', caseLabels: ['Objective', 'Contribution', 'Technology', 'Outcome'],
+    cases: [
+      ['Build a private environment for testing deployments and service configurations without affecting production systems.', 'Designed the equipment layout and set up Linux systems, local networking, containers, deployment scenarios, and troubleshooting exercises.', 'Linux, Docker, networking, reverse proxy, Jenkins, and shell scripting.', 'Created a reusable lab for application experiments, deployment automation, and incident-response simulations.'],
+      ['Bring service-health indicators together so anomalies in resources, logs, and availability are easier to spot.', 'Defined key operational signals, structured the dashboard, and designed a diagnostic flow for investigating service issues.', 'Linux metrics, service health checks, log monitoring, uptime monitoring, and observability dashboards.', 'Produced a centralized monitoring concept that simplifies service checks and makes troubleshooting more focused.'],
+      ['Support customer-service operations through an application that brings operational information into one interface.', 'Developed and improved application features, integrated the frontend with backend services, and supported server deployment.', 'JavaScript, Java, Quarkus, REST API, MySQL/PostgreSQL, Linux, and CI/CD.', 'Enabled service features to be developed and delivered through a more consistent workflow with post-deployment operational support.']
+    ],
     values: [
       ['.skip-link', 'Skip to content'], ['.hero-text', 'I build reliable applications, automate deployment processes, and keep server infrastructure secure, stable, and ready to scale.'],
       ['.cta-text', 'Start a conversation'], ['.actions .ghost', 'Download CV'], ['.hero-footer span:last-child', 'Scroll to explore'],
@@ -58,6 +70,13 @@ function setLanguage(language) {
   document.querySelector('meta[name="description"]').content = content.description;
   document.querySelectorAll('nav > a:not(.nav-contact)').forEach((link, index) => { link.textContent = content.menu[index]; });
   content.values.forEach(([selector, html]) => { const element = document.querySelector(selector); if (element) element.innerHTML = html; });
+  document.querySelectorAll('.project-case').forEach((caseStudy, projectIndex) => {
+    caseStudy.querySelector('summary span').textContent = content.caseButton;
+    caseStudy.querySelectorAll('.case-grid > div').forEach((item, detailIndex) => {
+      item.querySelector('small').textContent = content.caseLabels[detailIndex];
+      item.querySelector('p').textContent = content.cases[projectIndex][detailIndex];
+    });
+  });
   document.querySelectorAll('.wa-link').forEach((link, index) => { link.href = `https://wa.me/6283114237048?text=${encodeURIComponent(content.wa[index])}`; });
   document.querySelector('.contact-link').setAttribute('aria-label', content.waLabel);
   languageButton.setAttribute('aria-label', content.switchLabel);
