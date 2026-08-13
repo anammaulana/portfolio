@@ -3,7 +3,7 @@
 Catatan lanjutan setelah versi awal dipublikasikan:
 
 - [ ] Tambahkan detail konkret untuk setiap proyek: tujuan, kontribusi, teknologi, dan hasil.
-- [ ] Perbarui CV agar mencantumkan peran DevOps dan Server Specialist terbaru.
+- [x] Perbarui CV agar mencantumkan peran DevOps dan Server Specialist terbaru.
 - [ ] Konversi gambar proyek ke WebP agar halaman lebih cepat di perangkat mobile.
 - [ ] Tambahkan diagram alur teknis: Git push → Jenkins → Build → Deploy → Server → Monitoring.
 - [ ] Tambahkan halaman atau modal case study dan tautan repository untuk setiap proyek.

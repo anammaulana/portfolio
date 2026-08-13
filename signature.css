@@ -29,9 +29,88 @@ body { background-color:var(--bg); background-image:linear-gradient(rgba(212,255
 .contact-inner { text-align:left; align-items:flex-start; border:1px solid var(--line); padding:clamp(30px,7vw,85px); position:relative; background:rgba(8,11,10,.72); clip-path:polygon(0 0,95% 0,100% 15%,100% 100%,5% 100%,0 85%); }
 .contact-inner::after { content:"OPEN CHANNEL_"; position:absolute; right:35px; top:25px; color:var(--hot); font:700 9px "Manrope"; letter-spacing:.17em; }
 .nav-contact img { width:20px; height:20px; display:inline-block; vertical-align:middle; margin-right:5px; }
+.language-toggle { display:flex; align-items:center; gap:7px; padding:8px 10px; border:1px solid var(--line); background:transparent; color:var(--muted); font:700 9px "Manrope"; letter-spacing:.1em; cursor:pointer; }
+.language-toggle i { width:1px; height:12px; background:var(--line); }
+.language-toggle span { transition:color .2s; }
+.language-toggle span.active { color:var(--accent); }
+.menu-toggle[aria-expanded="true"] span:first-child { transform:translateY(3.5px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:last-child { transform:translateY(-3.5px) rotate(-45deg); }
 .button img { width:22px; height:22px; }
 .contact-link { display:inline-flex; align-items:center; gap:14px; font-size:clamp(18px,3vw,30px); border-bottom:2px solid var(--accent); padding-bottom:9px; }
 .contact-link img { width:48px; height:48px; flex:0 0 auto; transition:transform .25s ease; }
 .contact-link:hover img { transform:rotate(-8deg) scale(1.08); }
 .contact-link b { color:var(--hot); }
 @media(max-width:620px){.hero h1{font-size:clamp(48px,15vw,66px)}.photo{width:270px;height:270px}.contact-inner::after{display:none}.project-description{display:block!important}}
+
+@media(max-width:900px) {
+  .site-header { background:rgba(8,11,10,.94); }
+  .nav-shell { position:relative; }
+  .menu-toggle { position:relative; display:block; width:44px; height:44px; padding:9px; cursor:pointer; }
+  .menu-toggle span { position:absolute; left:9px; width:26px; margin:0; transform-origin:center; }
+  .menu-toggle span:first-child { top:17px; }
+  .menu-toggle span:last-child { top:24px; }
+  .menu-toggle[aria-expanded="true"] span:first-child { top:21px; transform:rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:last-child { top:21px; transform:rotate(-45deg); }
+  #main-nav {
+    position:fixed;
+    inset:82px 0 0;
+    width:100%;
+    height:calc(100dvh - 70px);
+    padding:clamp(38px,8vh,80px) 20px 32px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:0;
+    overflow-y:auto;
+    background:var(--bg);
+    border-top:1px solid var(--line);
+    transform:translateX(100%);
+    visibility:hidden;
+    transition:transform .35s ease,visibility .35s ease;
+  }
+  #main-nav.open { transform:translateX(0); visibility:visible; }
+  #main-nav > a:not(.nav-contact) {
+    display:flex;
+    align-items:center;
+    min-height:68px;
+    padding:0 4px;
+    border-bottom:1px solid var(--line);
+    font:600 clamp(26px,8vw,40px) "Manrope";
+    letter-spacing:-.045em;
+  }
+  #main-nav > a:not(.nav-contact)::after { content:"↘"; margin-left:auto; color:var(--hot); font-size:16px; }
+  .language-toggle {
+    order:4;
+    align-self:flex-start;
+    margin-top:28px;
+    padding:12px 14px;
+    font-size:11px;
+  }
+  #main-nav .nav-contact {
+    order:5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:52px;
+    margin-top:12px;
+    padding:14px 18px;
+    border:0;
+    border-radius:0;
+    background:var(--accent);
+    color:#080b0a;
+    font:700 13px "Manrope";
+  }
+  #main-nav .nav-contact img { width:24px; height:24px; }
+}
+
+@media(max-width:900px) and (max-height:600px) {
+  #main-nav { padding-top:18px; }
+  #main-nav > a:not(.nav-contact) { min-height:48px; font-size:24px; }
+  .language-toggle { margin-top:14px; }
+}
+
+@media(max-width:620px) {
+  #main-nav { inset:70px 0 0; height:calc(100dvh - 70px); }
+}
