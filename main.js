@@ -1,33 +1,32 @@
-function toggleDetail(e) {
-    const target = $(e.target)
+const header = document.querySelector('.site-header');
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('nav');
 
-    if($(target).hasClass("active")) {
-        $(target).html("More Info").removeClass("active")
-    } else {
-        $(target).html("Less Info").addClass("active")
-    }
-    
-    const item = $(target).parents(".about-exp-item")
-    const detail = $(item).children(".about-exp-item-detail")
-    $(detail).slideToggle()
+function closeMenu() {
+  navigation.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Buka navigasi');
 }
 
-function onFormSubmit(e) {
-    e.preventDefault()
-    const email = $("#inp_email")
-    const subject = $("#inp_subject")
-    const message = $("#inp_message")
+menuButton.addEventListener('click', () => {
+  const isOpen = navigation.classList.toggle('open');
+  document.body.classList.toggle('menu-open', isOpen);
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  menuButton.setAttribute('aria-label', isOpen ? 'Tutup navigasi' : 'Buka navigasi');
+});
 
-    if(!$(email).val()) {
-        alert("Email is required")
-    } else if (!$(subject).val()) {
-        alert("Subject is required")
-    } else if (!$(message).val()) {
-        alert("Message is required")
-    } else {
-        alert("Form Submitted")
-        $(email).val("")
-        $(subject).val("")
-        $(message).val("")
+navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
-}
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+document.getElementById('year').textContent = new Date().getFullYear();

@@ -1,0 +1,37 @@
+/* Anam's visual signature: a digital operations console, not a generic portfolio. */
+:root { --bg:#080b0a; --surface:#101513; --accent:#d4ff38; --hot:#ff6038; }
+body { background-color:var(--bg); background-image:linear-gradient(rgba(212,255,56,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(212,255,56,.035) 1px,transparent 1px); background-size:48px 48px; }
+.hero h1 { font-weight:800; font-size:clamp(54px,7vw,96px); line-height:.88; text-transform:uppercase; }
+.hero h1 em { color:var(--hot); font-weight:500; }
+.primary { border-radius:0; box-shadow:7px 7px 0 var(--hot); }
+.primary:hover { box-shadow:3px 3px 0 var(--hot); }
+.ghost { border-radius:0; }
+.hero-art { border:1px solid var(--line); background:rgba(8,11,10,.65); clip-path:polygon(0 0,88% 0,100% 12%,100% 100%,12% 100%,0 88%); }
+.hero-art::before,.hero-art::after { content:""; position:absolute; background:var(--accent); }
+.hero-art::before { left:22px; top:22px; width:42px; height:3px; }
+.hero-art::after { right:22px; bottom:22px; width:3px; height:42px; }
+.photo { width:390px; height:390px; aspect-ratio:1; border-radius:0; clip-path:none; }
+.photo img { border-radius:0; object-position:center 68%; filter:grayscale(1) contrast(1.12); }
+.photo b { position:absolute; bottom:0; left:0; background:var(--hot); color:#080b0a; padding:10px 13px; font:800 10px/1.15 "Manrope"; letter-spacing:.12em; }
+.signal-lines { position:absolute; inset:45px; display:flex; align-items:flex-end; justify-content:space-between; opacity:.32; }
+.signal-lines i { display:block; width:1px; background:var(--accent); }
+.signal-lines i:nth-child(1){height:42%}.signal-lines i:nth-child(2){height:78%}.signal-lines i:nth-child(3){height:58%}.signal-lines i:nth-child(4){height:90%}
+.coordinate { position:absolute; z-index:5; font:600 8px "Manrope"; letter-spacing:.15em; color:var(--accent); }
+.coordinate-top { top:25px; right:45px; }
+.coordinate-side { left:18px; top:50%; writing-mode:vertical-rl; transform:rotate(180deg); }
+.uptime { background:var(--accent); }
+.capabilities { box-shadow:12px 12px 0 rgba(212,255,56,.07); }
+.capabilities article { position:relative; }
+.capabilities article::after { content:"+"; position:absolute; right:12px; top:8px; color:var(--hot); }
+.project-media { clip-path:polygon(0 0,96% 0,100% 9%,100% 100%,0 100%); }
+.concept-label { position:absolute; left:16px; top:16px; z-index:2; padding:7px 9px; background:rgba(8,11,10,.82); border:1px solid rgba(255,255,255,.18); color:#d4ff38; font:600 8px "Manrope"; letter-spacing:.15em; text-transform:uppercase; }
+.project-description { max-width:520px; margin:12px 0 0!important; color:var(--muted)!important; font-size:13px!important; line-height:1.65; text-transform:none!important; letter-spacing:0!important; }
+.contact-inner { text-align:left; align-items:flex-start; border:1px solid var(--line); padding:clamp(30px,7vw,85px); position:relative; background:rgba(8,11,10,.72); clip-path:polygon(0 0,95% 0,100% 15%,100% 100%,5% 100%,0 85%); }
+.contact-inner::after { content:"OPEN CHANNEL_"; position:absolute; right:35px; top:25px; color:var(--hot); font:700 9px "Manrope"; letter-spacing:.17em; }
+.nav-contact img { width:20px; height:20px; display:inline-block; vertical-align:middle; margin-right:5px; }
+.button img { width:22px; height:22px; }
+.contact-link { display:inline-flex; align-items:center; gap:14px; font-size:clamp(18px,3vw,30px); border-bottom:2px solid var(--accent); padding-bottom:9px; }
+.contact-link img { width:48px; height:48px; flex:0 0 auto; transition:transform .25s ease; }
+.contact-link:hover img { transform:rotate(-8deg) scale(1.08); }
+.contact-link b { color:var(--hot); }
+@media(max-width:620px){.hero h1{font-size:clamp(48px,15vw,66px)}.photo{width:270px;height:270px}.contact-inner::after{display:none}.project-description{display:block!important}}

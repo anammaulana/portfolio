@@ -1,154 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio || Anam Maulana</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio Anam Maulana — Software Engineer, DevOps, dan Server Specialist di Indonesia.">
+  <meta name="theme-color" content="#07110d">
+  <meta property="og:title" content="Anam Maulana — Software Engineer & DevOps">
+  <meta property="og:description" content="Membangun aplikasi andal, mengotomasi deployment, dan menjaga infrastruktur tetap sehat.">
+  <meta property="og:type" content="website">
+  <title>Anam Maulana — Software Engineer & DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="signature.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand fs-4 fw-bold" href="#">AnamMaulanaNasution</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-    <section id="home" class="home container">
-        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
-            <div class="col-12 col-md-8">
-                <h3 class="fw-semibold">Hi! I am</h3>
-                <h1 class="fw-bold">Anam Maulana</h1>
-                <p>I am Web Developer based in Indonesia</p>
-                <a class="btn button" href="AMAULANA Resume Jobstreet .docx" download>Resume</a>
-            </div>
-            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
-                <img src="images/profile.png" alt="Potrait">
-            </div>
-        </div>
-        <a href="#about" class="text-decoration-none arrow w-100 d-flex align-items-center flex-column mt-5">
-            <div class="text-dark">More Info</div>
-            <img id="arrow" class="mt-2" src="images/arrow.svg" alt="arrow icon">
-        </a>
+  <a class="skip-link" href="#content">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="Beranda Anam Maulana">AM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka navigasi"><span></span><span></span></button>
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <a href="#about">Tentang</a><a href="#experience">Pengalaman</a><a href="#work">Karya</a><a class="nav-contact" href="https://wa.me/6283114237048?text=Halo%20Anam%2C%20saya%20melihat%20portfolio%20Anda%20dan%20ingin%20berdiskusi." target="_blank" rel="noreferrer"><img src="images/whatsapp.svg" alt="" aria-hidden="true"> WhatsApp <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero shell" id="home">
+      <div class="hero-copy reveal">
+        <div class="status"><i></i> System status: ready to collaborate</div>
+        <p class="intro">AMN / DIGITAL OPERATOR / JKT—ID</p>
+        <h1>I build.<br><em>I ship.</em><br>I keep it alive.</h1>
+        <p class="hero-text">Saya membangun aplikasi yang andal, mengotomasi proses deployment, dan memastikan infrastruktur server tetap aman, stabil, serta siap berkembang.</p>
+        <div class="actions"><a class="button primary" href="https://wa.me/6283114237048?text=Halo%20Anam%2C%20saya%20tertarik%20untuk%20berkolaborasi%20setelah%20melihat%20portfolio%20Anda." target="_blank" rel="noreferrer"><img src="images/whatsapp.svg" alt="" aria-hidden="true"> Mulai percakapan <span>↗</span></a><a class="button ghost" href="CV_2023-06-12-071553.pdf" download>Unduh CV</a></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="coordinate coordinate-top">06°12′S / 106°49′E</div><div class="coordinate coordinate-side">NODE / AMN-01</div>
+        <div class="signal-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="photo"><img src="images/profile.jpg" alt="Potret Anam Maulana" width="650" height="650"><b>ENGINEER<br>ON DUTY</b></div>
+        <div class="console-card"><div><i></i><i></i><i></i></div><code><span>$</span> deploy portfolio<br><b>✓ production is live</b></code></div>
+        <div class="uptime"><span>3 roles</span> one operator</div>
+      </div>
+      <div class="hero-footer reveal"><span>Jakarta, Indonesia · GMT+7</span><i></i><span>Scroll untuk menjelajah</span></div>
     </section>
-    <section id="about" class="about container">
-        <p>Halo, saya Anam Maulana, seorang programmer web berpengalaman dengan spesialisasi dalam pengembangan front-end dan back-end. Dengan latar belakang lebih dari 1 tahun di industri teknologi, saya memiliki keahlian dalam HTML, CSS, JavaScript, serta framework seperti React dan Node.js.Saya juga mahir menggunakan Laravel untuk pengembangan aplikasi berbasis PHP, serta database seperti MySQL dan PostgreSQL. Dalam pengembangan sistem skala besar dan enterprise, saya berpengalaman dengan Java dan framework Quarkus, serta menerapkan praktik DevOps untuk pengembangan yang efisien dan berkelanjutan.Saya bersemangat menciptakan aplikasi web yang responsif, user-friendly, dan berdesain menarik, serta memberikan solusi inovatif sesuai kebutuhan pengguna.Di portofolio ini, Anda akan menemukan beberapa proyek terbaru saya yang menunjukkan kemampuan saya dalam membangun solusi web modern dan fungsional. Jangan ragu untuk menghubungi saya untuk proyek kolaborasi atau diskusi lebih lanjut.</p>
-        <div class="about-exp">
-            <div class="about-exp-item">
-                <div class="about-exp-item-header">
-                    <div>
-                        <h5>Junior Software Engineer</h5>
-                        <p>Icon Plus Jakarta (2024-Now)</p>
-                    </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
-                </div>
-                <h5 class="about-exp-item-detail">Tentang ICON+</h5>
-                <p class="about-exp-item-detail">ICON+ (PT Indonesia Comnets Plus) adalah anak perusahaan dari PLN yang berfokus pada penyediaan layanan infrastruktur telekomunikasi dan solusi teknologi informasi di Indonesia. ICON+ memiliki peran penting dalam mendukung operasional PLN melalui penyediaan jaringan telekomunikasi yang handal dan inovatif.</p>
-                <h5 class="about-exp-item-detail">Peran Saya di ICON+</h5>
-                <p class="about-exp-item-detail">Sebagai PLN Aplikasi Pelayanan Pelanggan di ICON+, saya bertanggung jawab untuk Pengembangan Sistem Pelayanan Pelanggan.</p>
-            </div>
-            <!-- <div class="about-exp-item">
-                <div class="about-exp-item-header">
-                    <div>
-                        <h5>Software Engineer</h5>
-                        <p>Coding Studio (2021-Now)</p>
-                    </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
-                </div>
-                <p class="about-exp-item-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam, rerum nisi laborum labore est dolores neque fuga esse commodi nam quia atque aut dolorum! Culpa reprehenderit quo voluptates laboriosam.</p>
-            </div>
-            <div class="about-exp-item">
-                <div class="about-exp-item-header">
-                    <div>
-                        <h5>Software Engineer</h5>
-                        <p>Coding Studio (2021-Now)</p>
-                    </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
-                </div>
-                <p class="about-exp-item-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam, rerum nisi laborum labore est dolores neque fuga esse commodi nam quia atque aut dolorum! Culpa reprehenderit quo voluptates laboriosam.</p>
-            </div> -->
-        </div>
+
+    <section class="section shell" id="about">
+      <div class="section-index reveal"><span>01</span><p>Tentang saya</p></div>
+      <div class="about-grid reveal">
+        <h2>Menjembatani <em>code</em> dan <em>infrastructure.</em></h2>
+        <div class="body-copy"><p>Saya mengembangkan solusi digital dari antarmuka pengguna hingga layanan backend dan lingkungan produksinya. Bagi saya, produk yang baik bukan hanya terlihat rapi—tetapi juga cepat, mudah dirawat, dan dapat diandalkan.</p><p>Saat ini saya merangkap sebagai Software Engineer, DevOps, dan Server Specialist: menangani pengembangan aplikasi, otomasi CI/CD, deployment, konfigurasi server, serta pemantauan layanan.</p></div>
+      </div>
+      <div class="capabilities reveal">
+        <article><span>01</span><h3>Software Engineering</h3><p>Aplikasi web modern, API, integrasi sistem, dan database.</p></article>
+        <article><span>02</span><h3>DevOps &amp; CI/CD</h3><p>Pipeline otomatis, deployment konsisten, dan workflow delivery.</p></article>
+        <article><span>03</span><h3>Server Operations</h3><p>Konfigurasi, observabilitas, troubleshooting, dan reliability.</p></article>
+      </div>
+      <div class="tech-stack reveal"><span>JavaScript</span><span>React</span><span>Node.js</span><span>Laravel</span><span>Java</span><span>Quarkus</span><span>MySQL</span><span>PostgreSQL</span><span>Linux</span><span>Docker</span><span>Jenkins</span><span>CI/CD</span></div>
     </section>
-    <section id="work" class="work container">
-        <div class="row d-flex align-items-center gap-5">
-            <div class="col-12 col-md-5">
-                <!-- <p>ini beberapa project yang telah saya kerjakan</p> -->
-            </div>
-            <div class="col-12 col-md-6 work-img">
-                <div id="work-1" class="work-img-item">    
-                    <img src="images/work-1.png" alt="work 1" >
-                </div>
-                <div id="work-2" class="work-img-item">    
-                    <img src="images/work-2.png" alt="work 2" >
-                </div>
-                <div id="work-3" class="work-img-item">    
-                    <img src="images/work-3.png" alt="work 3" >
-                </div>
-            </div>
-        </div>
+
+    <section class="section shell" id="experience">
+      <div class="section-index reveal"><span>02</span><p>Pengalaman terkini</p></div>
+      <article class="experience-card reveal">
+        <div class="exp-period"><i></i> 2024—Sekarang</div>
+        <div class="exp-main"><p>PT Indonesia Comnets Plus (PLN Icon Plus) · Jakarta</p><h2>Software Engineer<br><em>DevOps &amp; Server Specialist</em></h2><div class="exp-summary"><p>Mengembangkan sistem aplikasi pelayanan pelanggan PLN sekaligus mendukung delivery dan operasional layanan pada lingkungan server.</p><ul><li>Pengembangan dan peningkatan aplikasi pelayanan pelanggan.</li><li>Otomasi build dan deployment melalui pipeline CI/CD.</li><li>Pengelolaan, monitoring, dan troubleshooting server aplikasi.</li><li>Kolaborasi lintas tim untuk menjaga stabilitas layanan.</li></ul></div></div>
+      </article>
     </section>
-    <section id="contact" class="contact container">
-        <div class="row d-flex align-items-center gap-5">
-            <div class="col-12 col-lg-6">
-                <p>Terima kasih telah mengunjungi portofolio saya. Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan lebih lanjut mengenai proyek saya, jangan ragu untuk menghubungi saya melalui detail di bawah ini. Saya akan dengan senang hati menjawab pertanyaan Anda dan berdiskusi tentang peluang kerjasama.</p>
-                <div class="row">
-                    <div class="col d-flex align-items-center">
-                        <img class="w-25" src="images/Facebook.svg" alt="facebook icon">
-                        <p class="mb-0 ms-2">AnamMaulana</p>
-                    </div>
-                    <div class="col d-flex align-items-center">
-                        <img class="w-25" src="images/Instagram.svg" alt="instagram icon">
-                        <p class="mb-0 ms-2">@AnamMaulana447</p>
-                    </div>
-                    <div class="col d-flex align-items-center">
-                        <img class="w-25" src="images/Twitter.svg" alt="twitter icon">
-                        <p class="mb-0 ms-2">@AnamMaulana</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5">
-                <form class="contact-form" onsubmit="onFormSubmit(event)">
-                    <div class="mb-3">
-                      <label for="inp_email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="inp_email" placeholder="example@email.com" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="inp_subject" class="form-label">Subject</label>
-                      <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="inp_message" class="form-label">Message</label>
-                        <input type="text" class="form-control" id="inp_message" placeholder="Your Message" required>
-                    </div>
-                    <div class="d-flex justify-content-center mt-5">
-                        <button type="submit" class="btn button">Submit</button>
-                    </div>
-                  </form>
-            </div>
-        </div>
+
+    <section class="section shell" id="work">
+      <div class="section-index reveal"><span>03</span><p>Karya pilihan</p></div>
+      <div class="work-heading reveal"><h2>Dari rack rumahan hingga layanan yang <em>berjalan.</em></h2><p>Visualisasi proyek yang menggambarkan fokus saya pada infrastructure, observability, dan pengembangan aplikasi web.</p></div>
+      <div class="projects">
+        <article class="project project-wide reveal"><div class="project-media"><img src="images/project-homelab.png" alt="Visualisasi home lab dengan rack server dan perangkat jaringan" loading="lazy"><span>Infrastructure ↗</span><small class="concept-label">Concept visual</small></div><div class="project-info"><div><small>01 · Infrastructure Project</small><h3>Home Lab: Build, Learn, Repeat</h3><p class="project-description">Lingkungan eksperimental untuk mempelajari networking, virtualisasi, deployment, dan operasional layanan secara langsung.</p></div><p>Linux · Network · Server</p></div></article>
+        <article class="project reveal"><div class="project-media"><img src="images/project-observability.png" alt="Visualisasi dashboard observability server" loading="lazy"><span>Observability ↗</span><small class="concept-label">Concept visual</small></div><div class="project-info"><div><small>02 · DevOps Project</small><h3>Observe Everything</h3><p class="project-description">Konsep pemantauan health, resource, log, dan availability untuk mendeteksi masalah sebelum berdampak ke pengguna.</p></div><p>Metrics · Logs · Uptime</p></div></article>
+        <article class="project reveal"><div class="project-media"><img src="images/project-webapp.png" alt="Visualisasi aplikasi web pelayanan pelanggan yang responsif" loading="lazy"><span>Web App ↗</span><small class="concept-label">Concept visual</small></div><div class="project-info"><div><small>03 · Software Project</small><h3>Customer Service Platform</h3><p class="project-description">Visualisasi aplikasi responsif untuk merangkum percakapan, performa tim, dan insight pelayanan dalam satu tampilan.</p></div><p>Frontend · Backend · API</p></div></article>
+      </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
+    <section class="section contact shell" id="contact">
+      <div class="contact-inner reveal"><div class="status"><i></i> Direct line / WhatsApp</div><h2>Ada aplikasi untuk dibangun atau server untuk dijaga?</h2><p>Ceritakan kebutuhannya. Saya siap berdiskusi tentang pengembangan produk, otomasi deployment, dan reliability sistem.</p><a class="contact-link" href="https://wa.me/6283114237048?text=Halo%20Anam%2C%20saya%20melihat%20portfolio%20Anda%20dan%20ingin%20berdiskusi%20tentang%20sebuah%20proyek." target="_blank" rel="noreferrer" aria-label="Mulai percakapan dengan Anam melalui WhatsApp"><img src="images/whatsapp.svg" alt="" aria-hidden="true"> <span>Chat via WhatsApp</span> <b>↗</b></a></div>
+      <footer><p>© <span id="year"></span> Anam Maulana</p><div><a href="https://github.com/anammaulana" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/anammaulana447/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="#home">Kembali ke atas ↑</a></div></footer>
+    </section>
+  </main>
+  <script src="main.js"></script>
 </body>
 </html>
