@@ -24,6 +24,11 @@ body { background-color:var(--bg); background-image:linear-gradient(rgba(212,255
 .capabilities article { position:relative; }
 .capabilities article::after { content:"+"; position:absolute; right:12px; top:8px; color:var(--hot); }
 .project-media { clip-path:polygon(0 0,96% 0,100% 9%,100% 100%,0 100%); }
+.diagram-media { background:#050806; }
+.diagram-media > a { display:block; }
+.diagram-media > a > span { position:absolute; right:20px; bottom:20px; z-index:3; padding:11px 15px; border-radius:99px; background:var(--accent); color:#07110d; font-size:10px; font-weight:600; opacity:0; transform:translateY(10px); transition:.3s; }
+.diagram-media:hover > a > span { opacity:1; transform:none; }
+.project-wide .diagram-media img { height:auto; max-height:none; object-fit:contain; }
 .concept-label { position:absolute; left:16px; top:16px; z-index:2; padding:7px 9px; background:rgba(8,11,10,.82); border:1px solid rgba(255,255,255,.18); color:#d4ff38; font:600 8px "Manrope"; letter-spacing:.15em; text-transform:uppercase; }
 .project-description { max-width:520px; margin:12px 0 0!important; color:var(--muted)!important; font-size:13px!important; line-height:1.65; text-transform:none!important; letter-spacing:0!important; }
 .project-case { margin-top:18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
